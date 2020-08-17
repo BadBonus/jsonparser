@@ -1,0 +1,9 @@
+{
+    "apps": [
+        {
+            "name": "parser",
+            "script": "npm",
+            "args" : "run serve"
+        }
+    ]
+}

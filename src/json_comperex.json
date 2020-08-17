@@ -1,0 +1,186 @@
+[
+  {
+    "title": "myform",
+    "id": "myid",
+    "props": {
+      "method": "post"
+    },
+    "component": "form",
+    "geometry": {
+      "width": 500,
+      "height": 500,
+      "top": 50,
+      "left": 50,
+      "position": "absolute"
+    },
+    "children": [
+      {
+        "title": "login",
+        "id": "loginid",
+        "component": "input",
+        "props": {
+          "placeholder": "Login"
+        },
+        "geometry": {
+          "width": 200,
+          "height": 10,
+          "top": 30,
+          "left": 30
+        }
+      },
+      {
+        "title": "Password",
+        "component": "password",
+        "props": {
+          "placeholder": "Password"
+        },
+        "geometry": {
+          "width": 200,
+          "height": 10,
+          "top": 60,
+          "left": 30
+        },
+        "actions": [
+          {
+            "type": "mouseover",
+            "call": "myfunc",
+            "data": ""
+          }
+        ]
+      },
+      {
+        "title": "Scales",
+        "component": "checkbox",
+        "geometry": {
+          "width": 80,
+          "height": 10,
+          "top": 90,
+          "left": 30
+        }
+      },
+      {
+        "title": "ExampleSelect",
+        "component": "select",
+        "geometry": {
+          "width": 300,
+          "height": 50,
+          "top": 120,
+          "left": 30
+        },
+        "props": {
+          "options": ["1","2","3","4","5"]
+        }
+      },
+      {
+        "component": "button",
+        "props": {
+          "title": "Submit"
+        },
+        "actions": [
+          {
+            "type": "click",
+            "call": "myfunc",
+            "data": ""
+          }
+        ],
+        "geometry": {
+          "width": 80,
+          "top": 150,
+          "left": 350
+        }
+      }
+    ]
+  },
+  {
+    "title": "my table",
+    "id": "mytableid",
+    "props": {
+      "columns": [
+        {
+          "first-name-column": {
+            "title": "Name",
+            "sort": "alphabetically",
+            "width": 20
+          }
+        },
+        {
+          "second-name-column": {
+            "title": "Second name"
+          }
+        }
+      ],
+      "data": {
+        "type": "static",
+        "source": [
+          [
+            "zxc",
+            "aupala"
+          ],
+          [
+            "asd",
+            "aillice"
+          ]
+        ]
+      }
+    },
+    "component": "table",
+    "geometry": {
+      "width": 500,
+      "height": 500,
+      "top": 50,
+      "left": 575,
+      "position": "absolute"
+    }
+  },
+  {
+    "title": "my table 2",
+    "id": "mytableid2",
+    "actions": [
+      {
+        "type": "onRowEdited",
+        "call": "saveRow",
+        "endpoint": "/api/saveTableData/{sourceId}"
+      }
+    ],
+    "props": {
+      "columns": [
+        {
+          "first-name-column": {
+            "title": "userId",
+            "width": 10
+          }
+        },
+        {
+          "second-name-column": {
+            "title": "id",
+            "width": 10
+          }
+        },
+        {
+          "third-name-column": {
+            "title": "title",
+            "width": 20,
+            "sort": "alphabetically"
+          }
+        },
+        {
+          "fourth-name-column": {
+            "title": "body"
+          }
+        }
+      ],
+      "data": {
+        "type": "dynamic",
+        "source": "/api/getInitialTableData/{sourceId}"
+      }
+    },
+    "component": "table",
+    "geometry": {
+      "width": 1025,
+      "height": 10,
+      "top": 600,
+      "left": 50,
+      "position": "absolute"
+    }
+  }
+]

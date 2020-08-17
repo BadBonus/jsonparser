@@ -1,0 +1,352 @@
+{
+  "component": "Container",
+  "children": [
+    {
+      "component": "Header",
+      "children": [
+        {
+          "component": "Title",
+          "props": {
+            "title": "Add change delete clients (KLT000)"
+          }
+        },
+        {
+          "component": "Menu",
+          "children": [
+            {
+              "component": "MenuBlock",
+              "id": "editblock",
+              "props": {
+                "title": "Edit"
+              },
+              "children": [
+                {
+                  "component": "MenuButton",
+                  "id": "newdocbutton",
+                  "props": {
+                    "title": "New",
+                    "iconFileName": "003-add-file.svg"
+                  },
+                  "actions": [
+                    {
+                      "type": "click",
+                      "call": "myfunc",
+                      "data": ""
+                    }
+                  ]
+                },
+                {
+                  "component": "MenuButton",
+                  "id": "searchdocbutton",
+                  "props": {
+                    "title": "Search",
+                    "iconFileName": "003-add-file.svg"
+                  },
+                  "actions": [
+                    {
+                      "type": "click",
+                      "call": "myfunc",
+                      "data": ""
+                    }
+                  ]
+                },
+                {
+                  "component": "MenuButton",
+                  "id": "savedocbutton",
+                  "props": {
+                    "title": "Save",
+                    "iconFileName": "003-add-file.svg"
+                  },
+                  "actions": [
+                    {
+                      "type": "click",
+                      "call": "myfunc",
+                      "data": ""
+                    }
+                  ]
+                },
+                {
+                  "component": "MenuButton",
+                  "id": "erasedocbutton",
+                  "props": {
+                    "title": "Erase",
+                    "iconFileName": "003-add-file.svg"
+                  },
+                  "actions": [
+                    {
+                      "type": "click",
+                      "call": "myfunc",
+                      "data": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "component": "menu-block",
+              "id": "closeblock",
+              "props": {
+                "title": "Close"
+              },
+              "children": [
+                {
+                  "component": "MenuButton",
+                  "id": "exitdocbutton",
+                  "props": {
+                    "title": "Exit",
+                    "iconFileName": "003-add-file.svg"
+                  },
+                  "actions": [
+                    {
+                      "type": "click",
+                      "call": "myfunc",
+                      "data": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "component": "menu-block",
+              "id": "navigateblock",
+              "props": {
+                "title": "Navigate"
+              },
+              "children": [
+                {
+                  "component": "MenuButton",
+                  "id": "pageupbutton",
+                  "props": {
+                    "title": "Page up",
+                    "iconFileName": "003-add-file.svg"
+                  },
+                  "actions": [
+                    {
+                      "type": "click",
+                      "call": "myfunc",
+                      "data": ""
+                    }
+                  ]
+                },
+                {
+                  "component": "MenuButton",
+                  "id": "lineupbutton",
+                  "props": {
+                    "title": "Line up",
+                    "iconFileName": "003-add-file.svg"
+                  },
+                  "actions": [
+                    {
+                      "type": "click",
+                      "call": "myfunc",
+                      "data": ""
+                    }
+                  ]
+                },
+                {
+                  "component": "MenuButton",
+                  "id": "nextlinebutton",
+                  "props": {
+                    "title": "Next Line",
+                    "iconFileName": "003-add-file.svg"
+                  },
+                  "actions": [
+                    {
+                      "type": "click",
+                      "call": "myfunc",
+                      "data": ""
+                    }
+                  ]
+                },
+                {
+                  "component": "MenuButton",
+                  "id": "pagedownbutton",
+                  "props": {
+                    "title": "Page Down",
+                    "iconFileName": "003-add-file.svg"
+                  },
+                  "actions": [
+                    {
+                      "type": "click",
+                      "call": "myfunc",
+                      "data": ""
+                    }
+                  ]
+                },
+                {
+                  "component": "MenuButton",
+                  "id": "insertlinebutton",
+                  "props": {
+                    "title": "InsertLine",
+                    "iconFileName": "003-add-file.svg"
+                  },
+                  "actions": [
+                    {
+                      "type": "click",
+                      "call": "myfunc",
+                      "data": ""
+                    }
+                  ]
+                },
+                {
+                  "component": "MenuButton",
+                  "id": "deletelinebutton",
+                  "props": {
+                    "title": "DeleteLine",
+                    "iconFileName": "003-add-file.svg"
+                  },
+                  "actions": [
+                    {
+                      "type": "click",
+                      "call": "myfunc",
+                      "data": ""
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "component": "Content",
+      "children": [
+        {
+          "component": "Form",
+          "children": [
+            {
+              "component": "Input",
+              "id": "customer",
+              "props": {
+                "title": "Customer"
+              },
+              "geometry": {
+
+              }
+            },
+            {
+              "component": "Input",
+              "id": "name",
+              "props": {
+                "title": "Name"
+              },
+              "geometry": {
+
+              }
+            },
+            {
+              "component": "Input",
+              "id": "title",
+              "props": {
+                "title": "Title"
+              },
+              "geometry": {
+
+              }
+            },
+            {
+              "component": "Input",
+              "id": "streetNr",
+              "props": {
+                "title": "Street nr"
+              },
+              "geometry": {
+
+              }
+            },
+            {
+              "component": "DoubleInput",
+              "children": [
+                {
+                  "component": "Input",
+                  "id": "zipCode",
+                  "props": {
+                    "title": "Zip code"
+                  },
+                  "geometry": {
+
+                  }
+                },
+                {
+                  "component": "Input",
+                  "id": "zipCode2",
+                  "props": {
+                    "title": ""
+                  }
+                }
+              ],
+              "geometry": {
+
+              }
+            },
+            {
+              "component": "Button",
+              "props": {
+                "title": "Submit"
+              },
+              "actions": [
+                {
+                  "type": "click",
+                  "call": "myfunc",
+                  "data": ""
+                }
+              ]
+            }
+          ],
+          "geometry": {
+            "height": 400,
+            "max-width": 600
+          }
+        },
+        {
+          "component": "Table",
+          "props": {
+            "columns": [
+              {
+                "first-name-column": {
+                  "title": "Contact",
+                  "sort": "alphabetically"
+                }
+              },
+              {
+                "second-name-column": {
+                  "title": "E-mail"
+                }
+              },
+              {
+                "third-name-column": {
+                  "title": "GSM"
+                }
+              }
+            ],
+            "data": {
+              "type": "static",
+              "source": [
+                [
+                  "qwe",
+                  "qwerty@gmail.com",
+                  "12312312312"
+                ],
+                [
+                  "abc",
+                  "abcdef@gmail.com",
+                  "123123123123"
+                ],
+                [
+                  "zxc",
+                  "zxcvbn@gmail.com",
+                  "123123123123"
+                ]
+              ]
+            }
+          },
+          "geometry": {
+            "height": 200,
+            "max-width": 600
+          }
+        }
+      ]
+    }
+  ]
+}
