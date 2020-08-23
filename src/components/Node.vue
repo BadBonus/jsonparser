@@ -3,7 +3,7 @@
              :style="geometry" v-on="events" :children="node.children"
 
              :value="value" @input="!$event.target && $emit('input', $event)"> <!-- form v-model -->
-    <node v-for="child in node.children" :key="child.id" :node="child"></node>
+    <node v-for="child in node.children" :key="child.id" :node="child" ></node>
   </component>
 </template>
 
@@ -23,6 +23,8 @@
   import Content from './Content';
   import DoubleInput from './DoubleInput';
   import Container from './Container';
+
+  import actions from './actions'
 
   export default {
     name: "node",
@@ -47,14 +49,9 @@
     methods: {
       capitalize(str) {
         return str.charAt(0).toUpperCase() + str.slice(1);
+
       },
-      myfunc() {
-        console.log('myfunc');
-      },
-      onRowEdited() {
-        console.log('onRowEdited')
-      },
-      saveRow: () => console.log('saveRow')
+      ...actions
     },
     data() {
       return {

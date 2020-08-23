@@ -81,7 +81,7 @@
               "component": "MenuButton",
               "id": "exitdocbutton",
               "props": {
-                "className":"close",
+                "className":"closeBtn",
                 "title": "Exit",
                 "iconFileName": "003-add-file.svg"
               },
@@ -241,10 +241,14 @@
             },
             {
               "component": "DoubleInput",
+              "id":"zipCode",
+              "props":{
+                "title":"Zip code"
+              },
               "children": [
                 {
                   "component": "Input",
-                  "id": "zipCode",
+                  "id": "zipCode_1",
                   "props": {
                     "title": "Zip code"
                   },
@@ -254,9 +258,9 @@
                 },
                 {
                   "component": "Input",
-                  "id": "zipCode2",
+                  "id": "zipCode_2",
                   "props": {
-                    "title": ""
+                    "title": "Zip code2"
                   }
                 }
               ],
@@ -279,8 +283,6 @@
             }
           ],
           "geometry": {
-            "height": 400,
-            "max-width": 600
           }
         },
         {

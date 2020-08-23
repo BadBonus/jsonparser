@@ -25,17 +25,17 @@
     width: 100%;
   }
 
-  .menu .edit:last-child::right,
-  .menu .close:last-child::right,
-  .menu .navigate:last-child::right{
+  /* .navbar .edit::after,
+  .navbar .closeBtn::after,
+  .navbar .navigate::after{
     content: '';
     display: block;
     height: 10px;
-    width: 1px;
+    width: 10px;
     background-color: gold;
-  }
+  } */
 
-  @media (max-width: 575.98px) {
+  @media (max-width: 600px) {
     .navbar {
       flex-direction: column;
       align-items: flex-start;

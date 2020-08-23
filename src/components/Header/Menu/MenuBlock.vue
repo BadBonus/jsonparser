@@ -30,7 +30,7 @@
     display: flex;
   }
 
-  @media (max-width: 575.98px) {
+  @media (max-width: 600px) {
     .menu-buttons.nav {
       align-self: flex-start;
     }

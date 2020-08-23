@@ -36,5 +36,12 @@
 <style scoped>
   .form {
     margin: 0 20px;
+    margin-bottom: 16px;
+  }
+
+  @media (max-width: 600px) {
+    .form {
+      text-align: center;
+    }
   }
 </style>

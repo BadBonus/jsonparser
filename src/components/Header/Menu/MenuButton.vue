@@ -1,5 +1,5 @@
 <template>
-  <button :class={classes}>
+  <button :class="classes">
     <img :src="require(`../../../assets/${iconFileName}`)" :alt="title"/>
     <span>{{title}}</span>
   </button>
@@ -17,12 +17,12 @@
   }
 </script>
 
-<style scoped>
+<style >
   .menu-button {
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    position: relative;
     background: none;
     border: none;
     outline: none;
@@ -45,7 +45,7 @@
     }
   }
 
-  @media (max-width: 575.98px) {
+  @media (max-width: 600px) {
     .menu-button.col-sm {
       display: flex;
       flex-direction: row;
@@ -58,7 +58,10 @@
     }
 
     .menu-button.col-sm > img {
-      width: 20px;
+      width: 40px;
+    }
+    .menu-button.col-sm{
+      margin-bottom: 16px;
     }
   }
 </style>
