@@ -1,6 +1,6 @@
 <template>
   <div>
-    <node :node="json"></node>
+    <node :node="jsonData"></node>
   </div>
 </template>
 
@@ -8,14 +8,25 @@
   import node from './Node'
   import 'bootstrap/dist/css/bootstrap.css'
   import 'bootstrap-vue/dist/bootstrap-vue.css'
-  import { mapGetters } from 'vuex'
+  import jsonData from './../create-doc'
 
   export default {
     components: {
       node
     },
+    data(){
+      return {
+        jsonData
+        }
+    },
+    beforeMount(){
+      console.log('beforeMount');
+      this.$store.commit('initialData', this.jsonData.data)
+    },
+    mounted(){
+    },
     computed: {
-      ...mapGetters(['json'])
+      // main_test() { return this.$store.getters.getDataFrom('test') }
     }
   }
 </script>

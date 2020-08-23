@@ -24,7 +24,8 @@
     name: "Table",
     props: {
       columns: Array,
-      data: Object
+      data: Object,
+      id:String
     },
     data() {
       return {
@@ -37,12 +38,16 @@
     beforeMount: async function () {
       if (this.data.type === 'dynamic') {
         //this.dynamic = await axios.get(data.source);
-        this.dynamicData = await axios.get('https://jsonplaceholder.typicode.com/posts?_limit=5')
-          .then(res => res.data.map(p => Object.values(p)))
-      } else {
-        this.dynamicData = this.data.source;
+        this.dynamicData =
+        await axios.get('https://jsonplaceholder.typicode.com/posts?_limit=5')
+        .then(res => {
+          console.log(res.data);
+          return res.data.map(p => Object.values(p))
+        })
       }
-
+      else{
+        // this.dynamicData = this.data.source
+      }
       for (let i = 0; i < this.columnsArr.length; i++) {
         if (this.columnsArr[i].sort === "alphabetically") {
           this.dynamicData.sort((a, b) => {
@@ -59,8 +64,9 @@
           })
         }
       }
-
-
+    },
+    mounted:function(){
+      this.dynamicData = this.$store.getters.getDataFrom(this.id);
     },
     methods: {
       onRowDblClick(row) {

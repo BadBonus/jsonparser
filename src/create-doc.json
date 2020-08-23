@@ -198,6 +198,9 @@
       "children": [
         {
           "component": "Form",
+          "logick":{
+            "test-Table": "addSelectiveData"
+          },
           "children": [
             {
               "component": "Input",
@@ -287,6 +290,7 @@
         },
         {
           "component": "Table",
+          "id":"test-Table",
           "props": {
             "columns": [
               {
@@ -333,5 +337,26 @@
         }
       ]
     }
-  ]
+  ],
+  "data": {
+    "test-Table":{
+      "data": [
+        [
+          "qwe",
+          "qwerty@gmail.com",
+          "12312312312"
+        ],
+        [
+          "abc",
+          "abcdef@gmail.com",
+          "123123123123"
+        ],
+        [
+          "zxc",
+          "zxcvbn@gmail.com",
+          "123123123123"
+        ]
+      ]
+    }
+  }
 }

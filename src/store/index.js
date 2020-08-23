@@ -1,22 +1,29 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import json from '../create-doc.json'
+// import json from '../create-doc.json'
 
 Vue.use(Vuex)
 
 export const store = new Vuex.Store({
   state: {
-    json
+    data:{
+    }
   },
   mutations: {
-    updateJson(state, payload) {
-      state.json = payload;
-    }
+    updateSelectiveData(state, payload) {
+      state.data[payload.name] = payload.data;
+    },
+    addSelectiveData(state, {name, data}) {
+      state.data[name] = [...state.data[name], data];
+    },
+    initialData(state, payload) {
+      state.data = payload;
+    },
   },
   getters: {
-    json(state) {
-      return state.json;
-    }
-  }
-})
+    getDataFrom:(state) =>(name) =>{
+      return state.data[name].data;
+    },
+  },
 
+})
