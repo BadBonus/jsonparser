@@ -14,7 +14,8 @@ export const store = new Vuex.Store({
       state.data[payload.name] = payload.data;
     },
     addSelectiveData(state, {name, data}) {
-      state.data[name] = [...state.data[name], data];
+
+      state.data[name] = [...state.data[name].data, data];
     },
     initialData(state, payload) {
       state.data = payload;

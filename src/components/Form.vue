@@ -8,7 +8,8 @@
   export default {
     name: "Form",
     props: {
-      children: Array
+      children: Array,
+      logick: Object
     },
     components: {
       node: () => import('./Node')
@@ -19,8 +20,19 @@
       }
     },
     methods: {
+
       submit() {
-        console.log(this.modelObj);
+        const methodName = Object.getOwnPropertyNames(this.logick)[0];
+        const idOfGoal = this.logick[methodName];
+        // payload.name
+        // payload.data
+        if(methodName === 'addSelectiveData'){
+
+          this.$store.commit(methodName, {
+            name:idOfGoal,
+            data:['test-contact','test-email.com','test-gsm']
+          })
+        }
       }
     },
     created() {
@@ -29,6 +41,10 @@
           this.modelObj[child.id] = ''
         }
       })
+    },
+    mounted(){
+      console.log('this.logick');
+      console.log(this.logick);
     }
   }
 </script>

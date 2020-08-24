@@ -1,9 +1,9 @@
 <template>
   <component :is="node.component" :id="node.id" v-bind="node.props"
              :style="geometry" v-on="events" :children="node.children"
-
+              :logick="node.logick"
              :value="value" @input="!$event.target && $emit('input', $event)"> <!-- form v-model -->
-    <node v-for="child in node.children" :key="child.id" :node="child" ></node>
+    <node v-for="child in node.children" :key="child.id" :node="child"  ></node>
   </component>
 </template>
 

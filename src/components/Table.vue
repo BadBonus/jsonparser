@@ -35,13 +35,15 @@
         editObject: {}
       }
     },
+    computed(){
+// dynamicData: [],
+    },
     beforeMount: async function () {
       if (this.data.type === 'dynamic') {
         //this.dynamic = await axios.get(data.source);
         this.dynamicData =
         await axios.get('https://jsonplaceholder.typicode.com/posts?_limit=5')
         .then(res => {
-          console.log(res.data);
           return res.data.map(p => Object.values(p))
         })
       }

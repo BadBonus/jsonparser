@@ -199,7 +199,7 @@
         {
           "component": "Form",
           "logick":{
-            "test-Table": "addSelectiveData"
+            "addSelectiveData": "test-Table"
           },
           "children": [
             {
