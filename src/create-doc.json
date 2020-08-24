@@ -199,7 +199,7 @@
         {
           "component": "Form",
           "logick":{
-            "addSelectiveData": "test-Table"
+            "deleteLastStringfromArray": "test-Table"
           },
           "children": [
             {
@@ -308,6 +308,16 @@
                 "third-name-column": {
                   "title": "GSM"
                 }
+              },
+              {
+                "fourth-name-column": {
+                  "title": "Streen nr"
+                }
+              },
+              {
+                "fivth-name-column": {
+                  "title": "Zip code"
+                }
               }
             ],
             "data": {
@@ -344,17 +354,23 @@
         [
           "qwe",
           "qwerty@gmail.com",
-          "12312312312"
+          "12312312312",
+          "Test-Strren nr1",
+          "XX007XXX"
         ],
         [
           "abc",
           "abcdef@gmail.com",
-          "123123123123"
+          "123123123123",
+          "Test-Strren nr2",
+          "XX007XXX"
         ],
         [
           "zxc",
           "zxcvbn@gmail.com",
-          "123123123123"
+          "123123123123",
+          "Test-Strren nr3",
+          "XX008XXX"
         ]
       ]
     }

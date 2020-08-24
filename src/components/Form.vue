@@ -24,16 +24,22 @@
       submit() {
         const methodName = Object.getOwnPropertyNames(this.logick)[0];
         const idOfGoal = this.logick[methodName];
-        // let formContent = {...this.modelObj};
+
         // payload.name
         // payload.data
-        console.log('Object.getOwnPropertyNames(this.modelObj)');
-        console.log(Object.getOwnPropertyNames());
         if(methodName === 'addSelectiveData'){
-
+          let formContent = {...this.modelObj};
+          const arrayFromContent = Object.values(formContent);
+          // console.log('Object.getOwnPropertyNames(this.modelObj)');
+          // console.log(Object.getOwnPropertyNames(formContent));
           this.$store.commit(methodName, {
             name:idOfGoal,
-            data:['test-contact','test-email.com','test-gsm']
+            data: arrayFromContent
+          })
+        }
+        else if(methodName === 'deleteLastStringfromArray'){
+          this.$store.commit(methodName, {
+            name:idOfGoal
           })
         }
       }

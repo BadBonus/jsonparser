@@ -14,6 +14,13 @@ export const store = new Vuex.Store({
     updateSelectiveData(state, payload) {
       state.data[payload.name] = payload.data;
     },
+    deleteLastStringfromArray(state, payload) {
+      let newArray = [...state.data[payload.name].data];
+      newArray.length = newArray.length - 1;
+      console.log('newArray');
+      console.log(newArray);
+      state.data[payload.name].data = newArray;
+    },
     addSelectiveData(state, {name, data}) {
 
       state.data[name].data = [...state.data[name].data, data];
