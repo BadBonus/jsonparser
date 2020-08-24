@@ -16,11 +16,15 @@ export const store = new Vuex.Store({
     },
     addSelectiveData(state, {name, data}) {
 
-      state.data[name] = [...state.data[name].data, data];
+      state.data[name].data = [...state.data[name].data, data];
     },
     initialData(state, payload) {
       state.data = payload;
     },
+    updateJson(state, payload) {
+      state.json = payload;
+    }
+
   },
   getters: {
     getDataFrom:(state) =>(name) =>{

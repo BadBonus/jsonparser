@@ -30,13 +30,17 @@
     data() {
       return {
         columnsArr: this.columns.map(c => Object.values(c)[0]),
-        dynamicData: [],
         editRow: -1,
         editObject: {}
       }
     },
-    computed(){
-// dynamicData: [],
+    computed:{
+    dynamicData(){
+      console.log('dynamicData');
+      console.log(this.$store.getters.getDataFrom(this.id));
+
+      return this.$store.getters.getDataFrom(this.id);
+    },
     },
     beforeMount: async function () {
       if (this.data.type === 'dynamic') {

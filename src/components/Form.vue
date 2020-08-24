@@ -24,8 +24,11 @@
       submit() {
         const methodName = Object.getOwnPropertyNames(this.logick)[0];
         const idOfGoal = this.logick[methodName];
+        // let formContent = {...this.modelObj};
         // payload.name
         // payload.data
+        console.log('Object.getOwnPropertyNames(this.modelObj)');
+        console.log(Object.getOwnPropertyNames());
         if(methodName === 'addSelectiveData'){
 
           this.$store.commit(methodName, {
@@ -41,10 +44,6 @@
           this.modelObj[child.id] = ''
         }
       })
-    },
-    mounted(){
-      console.log('this.logick');
-      console.log(this.logick);
     }
   }
 </script>

@@ -204,9 +204,9 @@
           "children": [
             {
               "component": "Input",
-              "id": "customer",
+              "id": "Contact",
               "props": {
-                "title": "Customer"
+                "title": "Contact"
               },
               "geometry": {
 
@@ -214,9 +214,9 @@
             },
             {
               "component": "Input",
-              "id": "name",
+              "id": "E-mail",
               "props": {
-                "title": "Name"
+                "title": "E-mail"
               },
               "geometry": {
 
@@ -224,9 +224,9 @@
             },
             {
               "component": "Input",
-              "id": "title",
+              "id": "GSM",
               "props": {
-                "title": "Title"
+                "title": "GSM"
               },
               "geometry": {
 
