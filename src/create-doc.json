@@ -283,6 +283,13 @@
                   "data": ""
                 }
               ]
+            },
+            {
+              "component": "Note",
+              "props": {
+                "title": "number of string -> 202 in text editor, you can change logick object with next methods: deleteLastStringfromArray for delete last string, addSelectiveData for add new string from form",
+                "geometry":{"marginTop":"12px"}
+              }
             }
           ],
           "geometry": {

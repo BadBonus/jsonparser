@@ -23,6 +23,8 @@
   import Content from './Content';
   import DoubleInput from './DoubleInput';
   import Container from './Container';
+  import Note from './Note';
+
 
   import actions from './actions'
 
@@ -44,7 +46,8 @@
       Title,
       Content,
       DoubleInput,
-      Container
+      Container,
+      Note
     },
     methods: {
       capitalize(str) {
@@ -55,7 +58,6 @@
     },
     data() {
       return {
-        geometry: {},
         events: {}
       }
     },
